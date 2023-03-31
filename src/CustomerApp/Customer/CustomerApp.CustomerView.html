@@ -1,0 +1,24 @@
+Custromer Code:<input [(ngModel)]="CustomerModel.CustomerCode" type="text"/><br>
+Custromer name:<input [(ngModel)]="CustomerModel.CustomerName" type="text"/><br>
+Custromer Amount:<input [(ngModel)]="CustomerModel.CustomerAmount" type="text"/><br>
+<input (click)="Add()" type="button" value="Add"/>
+
+
+{{CustomerModel.CustomerCode}}<br>
+{{CustomerModel.CustomerName}}<br>
+{{CustomerModel.CustomerAmount}}<br>
+
+<table>
+    <tr>
+        <td>CustomerCode</td>
+        <td>CustomerName</td>
+        <td>CustomerAmount</td>
+    </tr>
+
+    <tr *ngFor="let Cust of CustomerModels">
+        <td>{{Cust.CustomerCode}}</td>
+        <td>{{Cust.CustomerName}}</td>
+        <td>{{Cust.CustomerAmount}}</td>
+    </tr>
+</table>
+<router-outlet></router-outlet>
